@@ -16,7 +16,7 @@ function buildURL() {
         client_id: 'my-app',
         scope: 'email',
         state: 'm',
-        redirect_uri: `/post_token`
+        redirect_uri: `https://oidc-example-git-cvaldezr-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/post_token`
     })
 
     console.log('params -> ', params)
