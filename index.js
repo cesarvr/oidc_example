@@ -15,7 +15,7 @@ function buildURL() {
     const realm = 'test'
 
     let params = qs.stringify({
-        response_type: 'code',
+        response_type: 'code%20id_token%20token',
         client_id: 'my-app',
         scope: 'email',
         state: '1234556',
