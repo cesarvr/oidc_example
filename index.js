@@ -4,8 +4,11 @@ let oauth = require('./lib/oauth')
 
 var app = express()
 const PORT = 8080
-const SSO = `sso-cvaldezr-dev.apps.sandbox-m3.1530.p1.openshiftapps.com`
+const SSO  = process.env['SSO']  || `sso-cvaldezr-dev.apps.sandbox-m3.1530.p1.openshiftapps.com`
+const HOST = process.env['HOST'] || `login-cvaldezr-dev.apps.sandbox-m3.1530.p1.openshiftapps.com`
+
 console.log('SSO instance: ', SSO)
+console.log()
 
 function buildURL() {
 
@@ -15,11 +18,10 @@ function buildURL() {
         response_type: 'code',
         client_id: 'my-app',
         scope: 'email',
-        state: 'm',
-        redirect_uri: `https://oidc-example-git-cvaldezr-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/post_token`
+        state: '1234556',
+        redirect_uri: `https://${HOST}/post_token`
     })
 
-    console.log('params -> ', params)
     return `https://${SSO}/auth/realms/${realm}/protocol/openid-connect/auth?${params}`
 }
 
