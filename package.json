@@ -1,0 +1,16 @@
+{
+    "name": "web-auth",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "SSO=https://sso-cvaldezr-dev.apps.sandbox-m3.1530.p1.openshiftapps.com node index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.0",
+        "request": "^2.88.0"
+    }
+}
