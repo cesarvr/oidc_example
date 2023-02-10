@@ -8,7 +8,7 @@ const SSO  = process.env['SSO']  || `sso-cvaldezr-dev.apps.sandbox-m3.1530.p1.op
 const HOST = process.env['HOST'] || `login-cvaldezr-dev.apps.sandbox-m3.1530.p1.openshiftapps.com`
 
 console.log('SSO instance: ', SSO)
-console.log()
+console.log('Current HOST: ', HOST)
 
 function buildURL() {
 
